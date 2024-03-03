@@ -10,7 +10,6 @@ import { CartProvider } from "src/contexts/cart";
 import { Loading } from "@components/loading";
 import { Routes } from "@routes/index";
 import { StatusBar } from "react-native";
-import { Home } from "@screens/Home";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -20,5 +19,11 @@ export default function App() {
     Inter_700Bold,
   });
 
-  return <CartProvider>{fontsLoaded ? <Routes /> : <Loading />}</CartProvider>;
+  return (
+    <CartProvider>
+      <StatusBar barStyle="light-content" />
+
+      {fontsLoaded ? <Routes /> : <Loading />}
+    </CartProvider>
+  );
 }

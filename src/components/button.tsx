@@ -38,7 +38,18 @@ const Button = ({ children, ...rest }: TButtonProps) => {
 };
 
 const ButtonText = ({ children }: TButtonTextProps) => {
-  return <Text className="text-black  text-base mx-2">{children}</Text>;
+  return (
+    <Text
+      style={{
+        fontSize: 16,
+        lineHeight: 24,
+        marginHorizontal: 8,
+        color: "#000",
+      }}
+    >
+      {children}
+    </Text>
+  );
 };
 
 const ButtonIcon = ({ children }: TButtonIconProps) => {

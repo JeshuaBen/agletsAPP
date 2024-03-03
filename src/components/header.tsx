@@ -5,11 +5,15 @@ import colors from "tailwindcss/colors";
 type THeaderProps = {
   title: string;
   amountOfItemsInTheCart?: number;
+  onPress?: () => void;
+  cartCount?: number;
 };
 
 export const Header: React.FC<THeaderProps> = ({
   title,
   amountOfItemsInTheCart = 0,
+  onPress,
+  cartCount = 0,
 }) => {
   return (
     <View
@@ -40,7 +44,11 @@ export const Header: React.FC<THeaderProps> = ({
       </View>
 
       {amountOfItemsInTheCart > 0 && (
-        <TouchableOpacity className="relative" activeOpacity={0.7}>
+        <TouchableOpacity
+          className="relative"
+          activeOpacity={0.7}
+          onPress={onPress}
+        >
           <View
             style={{
               backgroundColor: "#86efac",
@@ -67,6 +75,18 @@ export const Header: React.FC<THeaderProps> = ({
 
           <Feather name="shopping-bag" color="#fff" size={24} />
         </TouchableOpacity>
+      )}
+      {cartCount > 0 && (
+        <Text
+          style={{
+            color: "#fff",
+            fontSize: 20,
+            lineHeight: 28,
+            marginTop: 8,
+          }}
+        >
+          {cartCount}
+        </Text>
       )}
     </View>
   );

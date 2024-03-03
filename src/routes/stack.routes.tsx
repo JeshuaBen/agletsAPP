@@ -1,4 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Cart } from "@screens/Cart";
 import { Home } from "@screens/Home";
 
 type StackRoutes = {
@@ -17,6 +18,7 @@ const StackRoutes: React.FC = () => {
       initialRouteName="home"
     >
       <Screen name="home" component={Home} />
+      <Screen name="cart" component={Cart} />
     </Navigator>
   );
 };

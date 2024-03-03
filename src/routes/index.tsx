@@ -7,7 +7,7 @@ export const Routes: React.FC = () => {
     <View
       style={{
         flex: 1,
-        backgroundColor: "#fafafa",
+        backgroundColor: "#0f172a",
       }}
     >
       <NavigationContainer>

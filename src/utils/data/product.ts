@@ -1,4 +1,4 @@
-const MENU = [
+export const MENU = [
   {
     id: "1",
     title: "X-React",
@@ -9,6 +9,20 @@ const MENU = [
   {
     id: "2",
     title: "X-JavaScript",
+    price: 34.9,
+    description:
+      "Os ingredientes desse hambúrguer mudam toda semana, então você sempre terá uma surpresa...",
+  },
+  {
+    id: "3",
+    title: "X-Native",
+    price: 34.9,
+    description:
+      "Os ingredientes desse hambúrguer mudam toda semana, então você sempre terá uma surpresa...",
+  },
+  {
+    id: "4",
+    title: "X-Next",
     price: 34.9,
     description:
       "Os ingredientes desse hambúrguer mudam toda semana, então você sempre terá uma surpresa...",
